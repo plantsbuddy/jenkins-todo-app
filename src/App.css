@@ -1,38 +1,56 @@
-.App {
+:root {
+  --text-size: clamp(1.2rem, 4vw, 1.6rem)
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {margin: 0; padding: 0; box-sizing: inherit;}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-image: url("/public/images/bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+h1 {
+  font-size: clamp(3.8rem, 10vw, 4.2rem);
   text-align: center;
+  margin-bottom: 20px;
+  -webkit-text-fill-color: rgb(255, 236, 236);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(241, 78, 8, 0.964);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  font-size: var(--text-size);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li.ant-list-item.done {
+  text-decoration: line-through;
+  color: rgba(128, 128, 128, 0.752)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+  width: 89%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: 3%;
+  padding: 15px;
+  border-radius: 13px;
+  background-color: rgba(243, 252, 254, 0.794);
+  border: 5px solid rgba(241, 78, 8, 0.617);
+  filter: drop-shadow(0px 0px 30px rgb(221, 221, 221))
 }
 
-.App-link {
-  color: #61dafb;
+button.ant-btn {
+  background-color: rgba(241, 78, 8, 0.799);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input.ant-input, span.ant-input-affix-wrapper {
+  background-color: rgba(249, 222, 211, 0.98);
+  font-size: var(--text-size);
 }
